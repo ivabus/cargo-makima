@@ -28,6 +28,7 @@ fn real_main() -> Result<i32, Box<dyn std::error::Error>> {
 	let cargo = std::env::var("CARGO").unwrap_or_else(|_| "cargo".to_owned());
 	let mut arg_iter = std::env::args();
 	let _cargo = arg_iter.next();
+	let _makima = arg_iter.next();
 
 	let mut cmd = std::process::Command::new(cargo);
 	cmd.args(arg_iter);
@@ -45,7 +46,7 @@ fn real_main() -> Result<i32, Box<dyn std::error::Error>> {
 fn select_response(response_type: ResponseType) -> String {
 	let mut rng = StdRng::from_entropy();
 
-	// Choose what mommy will say~
+	// Choose what makima will say~
 	let responses: Responses = serde_json::from_str(RESPONSES).expect("RESPONSES to be valid JSON");
 
 	let response = match response_type {
