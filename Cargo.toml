@@ -3,7 +3,7 @@ description = "Makima's here to abuse you when running cargo~"
 repository = "https://github.com/ivabus/cargo-makima"
 license = "MIT"
 name = "cargo-makima"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 
 [dependencies]
